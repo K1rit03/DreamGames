@@ -1,4 +1,4 @@
-package com.estudosjava.entities;
+package com.estudosjava.dreamgames.entities;
 
 import jakarta.persistence.*;
 
@@ -33,7 +33,7 @@ public class Game {
         this.genre = genre;
         this.platforms = platforms;
         this.score = score;
-        this.imgUrl = imgUrl;
+        this.imgUrl = imgUrl; 
         this.shortDescription = shortDescription;
         this.longDescription = longDescription;
     }
