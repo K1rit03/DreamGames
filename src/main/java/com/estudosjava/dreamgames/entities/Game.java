@@ -19,6 +19,7 @@ public class Game {
     private Double score;
     private String imgUrl;
     private String shortDescription;
+    @Column(name = "long_description", length = 1000)
     private String longDescription;
 
 
