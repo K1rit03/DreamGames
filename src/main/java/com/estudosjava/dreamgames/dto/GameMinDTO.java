@@ -1,21 +1,21 @@
 package com.estudosjava.dreamgames.dto;
 
 
+import com.estudosjava.dreamgames.Projection.GameMinProjection;
 import com.estudosjava.dreamgames.entities.Game;
-import jakarta.persistence.Column;
 
-public class GameMinDto {
+public class GameMinDTO {
     private long id;
     private String title;
     private Integer year;
     private String imgUrl;
     private String shortDescription;
 
-    public GameMinDto(){
+    public GameMinDTO(){
 
     }
 
-    public GameMinDto(Game entity) {
+    public GameMinDTO(Game entity) {
         id = entity.getId();
         title = entity.getTitle();
         imgUrl = entity.getImgUrl();
@@ -23,6 +23,13 @@ public class GameMinDto {
         shortDescription = entity.getShortDescription();
     }
 
+    public GameMinDTO(GameMinProjection projection) {
+        id = projection.getId();
+        title = projection.getTitle();
+        imgUrl = projection.getImgUrl();
+        year = projection.getYear();
+        shortDescription = projection.getShortDescription();
+    }
     public String getTitle() {
         return title;
     }

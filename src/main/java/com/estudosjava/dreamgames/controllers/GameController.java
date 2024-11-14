@@ -1,7 +1,7 @@
 package com.estudosjava.dreamgames.controllers;
 
 import com.estudosjava.dreamgames.dto.GameDTO;
-import com.estudosjava.dreamgames.dto.GameMinDto;
+import com.estudosjava.dreamgames.dto.GameMinDTO;
 import com.estudosjava.dreamgames.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,7 +25,7 @@ public class GameController {
 
     // Adicione a anotação @GetMapping para que o método seja um endpoint de GET
     @GetMapping
-    public List<GameMinDto> findAll() {
+    public List<GameMinDTO> findAll() {
         return gameService.findAll();
     }
 }
